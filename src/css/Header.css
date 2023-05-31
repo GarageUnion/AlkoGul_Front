@@ -24,14 +24,50 @@ header.topHeader button{
     font-size:20px;
 }
 
-header.topHeader button.inverted{
-    margin-left: 60%;
+header.topHeader .leftContainer{
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+
+}
+header.topHeader .rightContainer{
+    width: 50%;
+    display: flex;
+    justify-content:flex-end;
+
+}
+header.topHeader button.Enter{
     color: #edecee;
+    margin: 0;
+    width: 100%;
+    height: 100%;
     background-color: #3448a2;
     border-color: #edecee;
     border-width: 2px;
     border-radius: 10px;
 }
+header.topHeader .LinkEnter{
+    margin: 5px;
+    width:79.25px;
+    height: 45px;
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+}
+header.topHeader button.Registration{
+    margin: 0;
+    color: #3448a2;
+    background-color: #edecee;
+    border-color: #edecee;
+    border-width: 2px;
+    border-radius: 10px;
+}
+header.topHeader .LinkRegistration{
+    margin: 5px;
+    width: 151px;
+    height: 45px;
+}
+
 header.botHeader{
     width: 100%;
     display: flex;
