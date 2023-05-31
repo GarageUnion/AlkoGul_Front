@@ -1,0 +1,62 @@
+header.topHeader{
+    display: flex;
+    background-color: #3448a2;
+    color: #edecee;
+    padding: 20px; 
+    font-weight: 600;
+    font-size: 30px;
+}
+header.topHeader img{
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+}
+header.topHeader button{
+    margin-left: 15px;
+    height: 45px;
+    padding-left: 15px; 
+    padding-right: 15px;
+    background-color: #edecee;
+    color: #3448a2;
+    border-color: #edecee;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size:20px;
+}
+
+header.topHeader button.inverted{
+    margin-left: 60%;
+    color: #edecee;
+    background-color: #3448a2;
+    border-color: #edecee;
+    border-width: 2px;
+    border-radius: 10px;
+}
+header.botHeader{
+    width: 100%;
+    display: flex;
+    background-color: #edecee;
+    color: #222f68;
+    font-weight: 600;
+}
+header.botHeader button{
+    cursor:pointer;
+    font-size: 20px;
+    color: #323d6d;
+    
+    background-color: #edecee;
+    border: 0px;
+    border-width: 0px;
+    border-radius: 0px;
+}
+header.botHeader .Link{
+    margin-bottom: 10px;
+    height: 40px;
+    width: 15%;
+    cursor:pointer;
+    font-size: 25px;
+    color: #323d6d;
+    
+    background-color: #edecee;
+    border: 0px;
+}

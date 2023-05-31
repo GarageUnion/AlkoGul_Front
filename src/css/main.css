@@ -1,0 +1,22 @@
+body{
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 300;
+
+}
+button{
+    margin: 5px;
+    margin-left: 15px;
+    height: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px; 
+    padding-right: 15px;
+    background-color: #3448a2;
+    color: #edecee;
+    border-color: #3448a2;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size:20px;
+    cursor:pointer
+}
