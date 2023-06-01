@@ -7,11 +7,15 @@ class BreadPanel extends React.Component{
     {
         return(
             <div>
-                <Link className="panel">
-                    <img src={stockImage}></img>
-                    <h1 className="panelName"></h1>
-                    <h1 className= "panelRating"></h1>
+            <form className="panel">
+                <Link className="LinkPanel" >
+                    <div>
+                        <img src={stockImage}></img>
+                        <h1 className="name">Хлеб</h1>
+                        <label className="rating">5/5</label>
+                    </div>
                 </Link>
+            </form>
             </div>
         )
     }

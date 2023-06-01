@@ -9,13 +9,13 @@ class Header extends React.Component{
         return(<div>
             <header className='topHeader' style={{
                 display: 'flex'}}>
-                <div class="leftContainer">
+                <div className="leftContainer">
                 <img src={alkogul}/>
                 АлкоГуль
                 </div>
-                <div class="rightContainer">
-                    <Link to="/Enter" className="LinkEnter"><button class="Enter" >Вход</button></Link>
-                    <Link to="/Registration" className="LinkRegistration"><button class="Registration" >Регистрация</button></Link>
+                <div className="rightContainer">
+                    <Link to="/Enter" className="LinkEnter"><button className="Enter" >Вход</button></Link>
+                    <Link to="/Registration" className="LinkRegistration"><button className="Registration" >Регистрация</button></Link>
                 </div>
             </header>
             <header className='botHeader' style={{

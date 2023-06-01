@@ -12,11 +12,13 @@ class MyRecipePage extends React.Component{
                     <div className='login-form'>
                         <form>
                             <br></br>
-                            <h3>Email:</h3>
-                            <input name = 'email' type = "text" placeholder='Введите email'/><br></br>
-                            <h3>Пароль:</h3>
-                            <input name = 'password' type = "password" placeholder='Введите пароль'/><br></br>
-                            <button type = 'submit'>Войти</button>
+                            <h3>Название:</h3>
+                            <input name = 'name' type = "text" placeholder='Назовите рецепт'/><br></br>
+                            <h3>Состав:</h3>
+                            <input name = 'ingridients' type = "text" placeholder='Перечислите ингридиенты'/><br></br>
+                            <h3>Способ приготовления:</h3>
+                            <textarea name = 'recipe' type = "recipe" placeholder='Опишите способ приготовления'/><br></br>
+                            <button type = 'submit'>Поделиться</button>
                         </form> 
                     </div>
                 </div>

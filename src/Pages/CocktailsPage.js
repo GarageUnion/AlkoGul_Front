@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../components/Header"
-
+import BreadPanel from "../components/BreadPanel"
+import { Link } from 'react-router-dom'
 class CocktailsPage extends React.Component{
     render()
     {
@@ -9,8 +10,12 @@ class CocktailsPage extends React.Component{
                 <Header />
                 <div>
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
-                    <button>Поделиться рецептом</button>
+                <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
                 </header>
+                <div className='panelTable'>
+                    <BreadPanel/>
+                    <BreadPanel/>
+                </div>
                 </div>
             </div>
         )

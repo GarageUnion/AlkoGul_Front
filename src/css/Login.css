@@ -46,6 +46,19 @@ h1, h2, h3, h4, h5, h6, a {
   padding-left:10px;
 }
 
+.login textarea[type="recipe"]
+{
+  max-width:400px;
+  width: 80%;
+  line-height:1.5em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+
 .no-access {
   color:#E86850;
   margin:20px 0px 20px -57%;
