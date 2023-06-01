@@ -1,0 +1,11 @@
+.panel{
+ margin: 0;   
+}
+.panel img{
+    height:30px;
+    width: 30px;
+
+}
+.panel .name{
+    margin: 0;   
+}
