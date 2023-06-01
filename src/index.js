@@ -13,6 +13,7 @@ import CocktailsPage from './Pages/CocktailsPage';
 import MoonshinePage from './Pages/MoonshinePage';
 import EnterPage from './Pages/EnterPage';
 import RegistrationPage from './Pages/RegistrationPage';
+import MyRecipePage from './Pages/MyRecipePage';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
     {
         path: "/registration",
         element: <RegistrationPage/>,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/newRecipe",
+        element: <MyRecipePage/>,
         errorElement: <ErrorPage />,
     },
 ]);

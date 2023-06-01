@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Header from "../components/Header"
 
 class MoonshinePage extends React.Component{
@@ -9,7 +10,7 @@ class MoonshinePage extends React.Component{
                 <Header />
                 <div>
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
-                    <button>Поделиться рецептом</button>
+                    <Link to="/newRecipe"><button>Поделиться рецептом</button></Link>
                 </header>
                 </div>
             </div>
