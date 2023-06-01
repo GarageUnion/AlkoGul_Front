@@ -2,13 +2,13 @@ header.topHeader{
     display: flex;
     background-color: #424D84;
     color: #edecee;
-    padding: 20px; 
+    padding: 10px; 
     font-weight: 600;
     font-size: 30px;
 }
 header.topHeader img{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
     margin-right: 5px;
 }
 header.topHeader button{
