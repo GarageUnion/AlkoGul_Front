@@ -1,11 +1,35 @@
 .panel{
- margin: 0;   
+ height: 200px;
+ width: 140px;
+ margin: 25px;
+ display: flex;
+ justify-content:  center;
 }
 .panel img{
-    height:30px;
-    width: 30px;
-
+    height: auto;
+    width:auto;
+    max-width: 120px;
+    max-height: 140px;
+}
+.LinkPanel{
+    
+    text-decoration: none;
+    width:  140 px;
+    height: 200 px;
 }
 .panel .name{
+    color: #000000;
     margin: 0;   
+    font-size: 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content:  center;
+    
+}
+
+.panel .rating{
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    justify-content:  center;
 }

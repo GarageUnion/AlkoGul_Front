@@ -11,7 +11,11 @@ class ProductsPage extends React.Component{
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
                     <button>Добавить продукцию</button>
                 </header>
-                <BreadPanel/>
+                <div className='panelTable'>
+                    <BreadPanel/>
+                    <BreadPanel/>
+                    <BreadPanel/>
+                </div>
             </div>
         )
     }
