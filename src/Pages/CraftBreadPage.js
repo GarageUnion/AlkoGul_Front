@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from "../components/Header"
 import BreadPanel from "../components/BreadPanel"
-class MoonshinePage extends React.Component{
+class CraftBreadPage extends React.Component{
     render()
     {
         return(
@@ -28,4 +28,4 @@ class MoonshinePage extends React.Component{
     }
 }
 
-export default MoonshinePage
+export default CraftBreadPage

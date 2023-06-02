@@ -24,8 +24,8 @@ class Header extends React.Component{
                 justifyContent: 'center',
             }}>
                 <Link to ={'/'} className='Link'><button>Продукция</button></Link>
-                <Link to ={'/cocktails'} className='Link'><button>Коктейли</button></Link>
-                <Link to ={'/moonshine'} className='Link'><button>Самогон</button></Link>
+                <Link to ={'/pies'} className='Link'><button>Коктейли</button></Link>
+                <Link to ={'/craftbread'} className='Link'><button>Самогон</button></Link>
             </header>
         </div>)
     }

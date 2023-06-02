@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../components/Header"
 import BreadPanel from "../components/BreadPanel"
 import { Link } from 'react-router-dom'
-class CocktailsPage extends React.Component{
+class PiesPage extends React.Component{
     render()
     {
         return(
@@ -22,4 +22,4 @@ class CocktailsPage extends React.Component{
     }
 }
 
-export default CocktailsPage
+export default PiesPage

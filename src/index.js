@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import App from "./App"
 import ProductsPage from "./Pages/ProductsPage"
 import'./css/main.css'
 import'./css/Header.css'
@@ -9,8 +7,8 @@ import'./css/Login.css'
 import'./css/BreadPanel.css'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import ErrorPage from "./Pages/ErrorPage"
-import CocktailsPage from './Pages/CocktailsPage';
-import MoonshinePage from './Pages/MoonshinePage';
+import PiesPage from './Pages/PiesPage';
+import CraftBreadPage from './Pages/CraftBreadPage';
 import EnterPage from './Pages/EnterPage';
 import RegistrationPage from './Pages/RegistrationPage';
 import MyRecipePage from './Pages/MyRecipePage';
@@ -23,13 +21,13 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/cocktails",
-        element: <CocktailsPage />,
+        path: "/pies",
+        element: <PiesPage />,
         errorElement: <ErrorPage />,
     },
     {
-        path: "/moonshine",
-        element: <MoonshinePage/>,
+        path: "/craftbread",
+        element: <CraftBreadPage/>,
         errorElement: <ErrorPage />,
     },
     {
