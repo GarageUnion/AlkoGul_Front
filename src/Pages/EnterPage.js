@@ -3,6 +3,14 @@ import Header from '../components/Header'
 
 
 class EnterPage extends React.Component{
+//     constructor()
+//     {
+//         super()
+//         fetch('http://localhost:5001/Users/many')
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(error => console.error(error));
+//     }
     render()
     {
         return(
