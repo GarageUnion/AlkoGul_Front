@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from "../components/Header"
-import BreadPanel from "../components/BreadPanel"
-import Breads from "../components/Breads"
 import axios from 'axios'
+import PanelTable from '../components/PanelTable'
 //const baseUrl="https://reqres.in/api/users?page=1"
 
 class ProductsPage extends React.Component{
     constructor(props){
         super(props)
         this.state ={
-            breads:
+            products:
                 [
                     {breadReviews:[],
                     id:1,
@@ -54,7 +53,7 @@ class ProductsPage extends React.Component{
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
                 </header>
                 <div >
-                    <Breads breads={this.state.breads}></Breads>
+                    <PanelTable elements={this.state.products} emptyListMessage="Нет продукции"></PanelTable>
                 </div>
             </div>
         )

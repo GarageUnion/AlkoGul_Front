@@ -11,7 +11,7 @@ class Header extends React.Component{
                 display: 'flex'}}>
                 <div className="leftContainer">
                 <img src={alkogul}/>
-                АлкоГуль
+                ReBREADing
                 </div>
                 <div className="rightContainer">
                     <Link to="/Enter" className="LinkEnter"><button className="Enter" >Вход</button></Link>
@@ -24,8 +24,8 @@ class Header extends React.Component{
                 justifyContent: 'center',
             }}>
                 <Link to ={'/'} className='Link'><button>Продукция</button></Link>
-                <Link to ={'/pies'} className='Link'><button>Коктейли</button></Link>
-                <Link to ={'/craftbread'} className='Link'><button>Самогон</button></Link>
+                <Link to ={'/pies'} className='Link'><button>Пирожки</button></Link>
+                <Link to ={'/craftbread'} className='Link'><button>Хлеб</button></Link>
             </header>
         </div>)
     }

@@ -12,8 +12,8 @@ class BreadPanel extends React.Component{
                 <Link className="LinkPanel" >
                     <div>
                         <img src={stockImage}></img>
-                        <h1 className="name"> {this.props.bread.name} </h1>
-                        <label className="rating">{this.props.bread.rate}</label>
+                        <h1 className="name"> {this.props.data.name} </h1>
+                        <label className="rating">{this.props.data.rate}</label>
                     </div>
                 </Link>
             </form>
