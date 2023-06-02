@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from "../components/Header"
+import Header from "../../components/Header"
 import { Link } from 'react-router-dom'
-import PanelTable from '../components/PanelTable'
+import PanelTable from '../../components/PanelTable'
 class PiesPage extends React.Component{
     constructor(props)
     {
@@ -37,7 +37,7 @@ class PiesPage extends React.Component{
                         <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
                     </header>
                     <div>
-                    <PanelTable elements={this.state.pies} emptyListMessage="Нет пирожков"></PanelTable>
+                    <PanelTable elements={this.state.pies} link="/pieRecipe" emptyListMessage="Нет пирожков"></PanelTable>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Header from "../components/Header"
-import PanelTable from "../components/PanelTable"
+import Header from "../../components/Header"
+import PanelTable from "../../components/PanelTable"
 class CraftBreadPage extends React.Component{
     constructor(props)
     {
@@ -41,7 +41,7 @@ class CraftBreadPage extends React.Component{
                         <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
                     </header>
                     <div >
-                        <PanelTable elements={this.state.craftBreads} emptyListMessage="Нет Хлеба"></PanelTable>
+                        <PanelTable elements={this.state.craftBreads} link="/craftBreadRecipe" emptyListMessage="Нет Хлеба"></PanelTable>
                     </div>
                 </div>
             </div>

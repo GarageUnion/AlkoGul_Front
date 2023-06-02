@@ -6,7 +6,7 @@ class PanelTable extends React.Component{
         if(this.props.elements.length > 0)
             return (<div className='panelTable'>
                 {this.props.elements.map((el) =>(
-                    <BreadPanel key={el.id} data={el}/>
+                    <BreadPanel key={el.id} data={el} link={this.props.link}/>
                 ))}  
             </div>)
         else

@@ -2,14 +2,15 @@ import React from "react"
 import {Link} from "react-router-dom"
 import stockImage from "../img/image-bread-stock.png"
 
-class BreadPanel extends React.Component{
+export class BreadPanel extends React.Component{
 
+    
     render()
     {
         return(
             <div>
             <form className="panel">
-                <Link className="LinkPanel" >
+                <Link to={this.props.link} className="LinkPanel" >
                     <div>
                         <img src={stockImage}></img>
                         <h1 className="name"> {this.props.data.name} </h1>
