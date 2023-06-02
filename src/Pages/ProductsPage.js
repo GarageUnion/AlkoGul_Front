@@ -1,15 +1,50 @@
 import React from 'react'
 import Header from "../components/Header"
 import BreadPanel from "../components/BreadPanel"
+import Breads from "../components/Breads"
 import axios from 'axios'
 //const baseUrl="https://reqres.in/api/users?page=1"
 
 class ProductsPage extends React.Component{
     constructor(props){
         super(props)
-        //axios.get(baseUrl).then((res)=>{
-          //  console.log(res.data)
-        //})
+        this.state ={
+            breads:
+                [
+                    {breadReviews:[],
+                    id:1,
+                    name:"Бородинский",
+                    price:30.0,
+                    category:2,
+                    description:"Вкусный черный хлеб",
+                    rate:0.0},
+
+                    {breadReviews:[],
+                    id:2,
+                    name:"Багет",
+                    price:50.0,
+                    category:1,
+                    description:"Здоровенная палка хлеба",
+                    rate:0.0},
+
+                    {breadReviews:[],
+                    id:3,
+                    name:"Булочка Коломенская",
+                    price:50.0,
+                    category:4,
+                    description:"Обычная булка",
+                    rate:0.0},
+
+                    {breadReviews: [{id:1,review:"Вах как вкусно",rate:5,userId:3},
+                                    {id:2,review:"Неплохо",rate:4,userId:2}],
+                    id:4,
+                    name:"Пирожок с картошкой",
+                    price:45.0,
+                    category:3,
+                    description:"Самый вкусный на свете пирожок по версии Воваса",
+                    rate:4.5}
+                ]
+        }
     }
     render()
     {
@@ -18,10 +53,8 @@ class ProductsPage extends React.Component{
                 <Header />
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
                 </header>
-                <div className='panelTable'>
-                    <BreadPanel/>
-                    <BreadPanel/>
-                    <BreadPanel/>
+                <div >
+                    <Breads breads={this.state.breads}></Breads>
                 </div>
             </div>
         )

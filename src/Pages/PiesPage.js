@@ -13,8 +13,6 @@ class PiesPage extends React.Component{
                 <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
                 </header>
                 <div className='panelTable'>
-                    <BreadPanel/>
-                    <BreadPanel/>
                 </div>
                 </div>
             </div>
