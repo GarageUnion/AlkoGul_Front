@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from "../components/Header"
-import axios from 'axios'
 import PanelTable from '../components/PanelTable'
 //const baseUrl="https://reqres.in/api/users?page=1"
 
