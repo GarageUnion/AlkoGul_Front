@@ -1,7 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import Users from '../components/Users'
-
 
 class EnterPage extends React.Component{
     constructor(props)
@@ -10,11 +8,12 @@ class EnterPage extends React.Component{
         this.state = {
             users: [],
             inputEmail: "",
-            inputPassword: "",
-            flag: false,
+            inputPassword: ""
         }
         this.myFunc = this.myFunc.bind(this)
         this.inputClick = this.inputClick.bind(this) 
+        this.myFunc(this)
+        console.log(this.state.users)
     }
     
      myFunc = (that) => {
@@ -44,9 +43,7 @@ class EnterPage extends React.Component{
             console.log("YOU THE BEST!!!")
         }
     }
-    componentDidMount(){
-        this.myFunc(this)
-    }
+    
 
     render()
     {

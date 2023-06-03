@@ -4,6 +4,10 @@ import { useLocation } from 'react-router-dom'
 
 
 class ProductDiscriptionPage extends React.Component{
+    constructor(props){
+        super(props);
+       // this.state = {product: this.props.location.state}
+    }
     render()
     {
         return(
@@ -11,7 +15,7 @@ class ProductDiscriptionPage extends React.Component{
                 <Header />
                 <div>
                     <h2>Фото пирожка:</h2>
-                    <h2>Описание:</h2>
+                    {/* <h2>{this.props.location.state.name}</h2>  */}
                 </div>
             </div>
         )

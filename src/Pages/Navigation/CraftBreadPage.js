@@ -7,29 +7,16 @@ class CraftBreadPage extends React.Component{
     {
         super(props)
         this.state ={
-            craftBreads:
-            [
-                {
-                    breadReviews:[],
-                    id:2,
-                    name:"Черный хлеб",
-                    necessaryProducts:"Только мука",
-                    isMachineRequired:true,
-                    description:"тест2",
-                    rate:0.0
-                },
-                {
-                    breadReviews:[   {id:1,review:"Вкусно!",rate:5,userId:4},
-                                        {id:2,review:"Не вкусно!",rate:2,userId:5}],
-                    id:1,
-                    name:"Белый хлеб",
-                    necessaryProducts:"Мука и что-то еще",
-                    isMachineRequired:true,
-                    description:"тестестест",
-                    rate:3.5
-                }
-            ]
+            craftBreads:[]
         }
+        this.myFunc = this.myFunc.bind(this)
+        this.myFunc(this)
+    }
+    myFunc = (that) => {
+        fetch('http://localhost:5006/CraftBread/many') //http://:5000/Users/many
+        .then(function(response){return response.json();})
+        .then(function(jsonStr){that.setState({craftBreads: jsonStr});})
+        .catch(error => console.error(error));
     }
     render()
     {
@@ -38,7 +25,7 @@ class CraftBreadPage extends React.Component{
                 <Header />
                 <div>
                     <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
-                        <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
+                        <Link to = "/newCraftBreadRecipe"><button>Поделиться рецептом</button></Link>
                     </header>
                     <div >
                         <PanelTable elements={this.state.craftBreads} link="/craftBreadRecipe" emptyListMessage="Нет Хлеба"></PanelTable>

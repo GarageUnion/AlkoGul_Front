@@ -2,13 +2,14 @@ import React from 'react'
 import Header from '../components/Header'
 
 
-class MyRecipePage extends React.Component{
+class MyCraftBreadRecipePage extends React.Component{
     constructor (props){
         super(props)
         this.state = {
             inputName: "",
             textIngridient: "",
             textRecipe: "",
+            isMachineRequired: false,
         }
     }
     inputClick = (event) =>{
@@ -16,12 +17,13 @@ class MyRecipePage extends React.Component{
         if((this.state.inputName!=="")&&(this.state.textIngridient!=="")&&(this.state.textRecipe!==""))
         {
             try {
-                const response = fetch("http://localhost:5218/api/Recipes", {
+                const response = fetch("http://localhost:5006/CraftBread", {
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/json'},
                     body: JSON.stringify({ name: this.state.inputName,
                             necessaryProducts: this.state.textIngridient,
+                            isMachineRequired: this.state.isMachineRequired,
                             description: this.state.textRecipe,
                         })
                 });
@@ -56,12 +58,15 @@ class MyRecipePage extends React.Component{
                                 placeholder='Перечислите ингридиенты'
                                 onChange={(e) => this.setState({textIngridient: e.target.value})}
                             /><br></br>
+                            <h3>Используется печка?:</h3>
+                            <input type="checkbox"  onChange={(e) => this.setState({isMachineRequired: e.target.value})}></input><br></br>
                             <h3>Способ приготовления:</h3>
                             <textarea name = 'recipe'
                                 type = "recipe" 
                                 placeholder='Опишите способ приготовления'
                                 onChange={(e) => this.setState({textRecipe: e.target.value})}
                             /><br></br>
+                            <h3>Используется печка?:</h3>
                             <button type = 'submit' onClick={this.inputClick}>Поделиться</button>
                         </form> 
                     </div>
@@ -72,4 +77,4 @@ class MyRecipePage extends React.Component{
     }
 }
 
-export default MyRecipePage
+export default MyCraftBreadRecipePage

@@ -12,6 +12,7 @@ import CraftBreadPage from './Pages/Navigation/CraftBreadPage';
 import EnterPage from './Pages/EnterPage';
 import RegistrationPage from './Pages/RegistrationPage'
 import MyRecipePage from './Pages/MyRecipePage';
+import MyCraftBreadRecipePage from './Pages/MyRecipePage';
 import PieRecipePage from './Pages/BreadDiscription/PieRecipePage';
 import ProductDiscriptionPage from './Pages/BreadDiscription/ProductDiscriptionPage';
 import CraftBreadRecipePage from './Pages/BreadDiscription/CraftBreadRecipePage';
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
     {
         path: "/newRecipe",
         element: <MyRecipePage/>,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/newCraftBreadRecipe",
+        element: <MyCraftBreadRecipePage/>,
         errorElement: <ErrorPage />,
     },
 

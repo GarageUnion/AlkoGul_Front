@@ -7,42 +7,16 @@ class ProductsPage extends React.Component{
     constructor(props){
         super(props)
         this.state ={
-            products:
-                [
-                    {breadReviews:[],
-                    id:1,
-                    name:"Бородинский",
-                    price:30.0,
-                    category:2,
-                    description:"Вкусный черный хлеб",
-                    rate:0.0},
-
-                    {breadReviews:[],
-                    id:2,
-                    name:"Багет",
-                    price:50.0,
-                    category:1,
-                    description:"Здоровенная палка хлеба",
-                    rate:0.0},
-
-                    {breadReviews:[],
-                    id:3,
-                    name:"Булочка Коломенская",
-                    price:50.0,
-                    category:4,
-                    description:"Обычная булка",
-                    rate:0.0},
-
-                    {breadReviews: [{id:1,review:"Вах как вкусно",rate:5,userId:3},
-                                    {id:2,review:"Неплохо",rate:4,userId:2}],
-                    id:4,
-                    name:"Пирожок с картошкой",
-                    price:45.0,
-                    category:3,
-                    description:"Самый вкусный на свете пирожок по версии Воваса",
-                    rate:4.5}
-                ]
+            products:[]
         }
+        this.myFunc = this.myFunc.bind(this)
+        this.myFunc(this)
+    }
+    myFunc = (that) => {
+        fetch('http://localhost:5062/Bread/many') //http://:5000/Users/many
+        .then(function(response){return response.json();})
+        .then(function(jsonStr){that.setState({products: jsonStr});})
+        .catch(error => console.error(error));
     }
     render()
     {

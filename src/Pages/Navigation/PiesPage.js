@@ -7,25 +7,17 @@ class PiesPage extends React.Component{
     {
         super(props)
         this.state ={
-            pies:
-            [
-                {
-                    recipeReviews:[],
-                    id:4,
-                    name:"Пирожок с капустой",
-                    necessaryProducts:"Мука, капуста, соль, яйца, сахар, дрожжи",
-                    description:"Для приготовления пирожка с капустой нужно всего лишь взять обычный советский...",
-                    rate:0.0
-                },
-                {
-                    recipeReviews:[],
-                    id:5,
-                    name:"Хачапури по-аджарски",
-                    necessaryProducts:"Мука, сыр сулугуни, яйца, сахар, дрожжи",
-                    description:"А вот хачапури... мы пекли их с моей матерью с самого моего детства, но никто не называет меня Гиви-пекарь",
-                    rate:0.0
-                }]
+            pies:[]
+            
         }
+        this.myFunc = this.myFunc.bind(this)
+        this.myFunc(this)
+    }
+    myFunc = (that) => {
+        fetch('http://localhost:5218/api/Recipes/many') //http://:5000/Users/many
+        .then(function(response){return response.json();})
+        .then(function(jsonStr){that.setState({pies: jsonStr});})
+        .catch(error => console.error(error));
     }
     render()
     {
@@ -34,7 +26,7 @@ class PiesPage extends React.Component{
                 <Header />
                 <div>
                     <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
-                        <Link to = "/newRecipe"><button>Поделиться рецептом</button></Link>
+                        <Link to = "/newRecipe" ><button>Поделиться рецептом</button></Link>
                     </header>
                     <div>
                     <PanelTable elements={this.state.pies} link="/pieRecipe" emptyListMessage="Нет пирожков"></PanelTable>
