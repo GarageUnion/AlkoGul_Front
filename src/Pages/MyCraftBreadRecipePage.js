@@ -66,7 +66,6 @@ class MyCraftBreadRecipePage extends React.Component{
                                 placeholder='Опишите способ приготовления'
                                 onChange={(e) => this.setState({textRecipe: e.target.value})}
                             /><br></br>
-                            <h3>Используется печка?:</h3>
                             <button type = 'submit' onClick={this.inputClick}>Поделиться</button>
                         </form> 
                     </div>
