@@ -59,7 +59,7 @@ class MyCraftBreadRecipePage extends React.Component{
                                 onChange={(e) => this.setState({textIngridient: e.target.value})}
                             /><br></br>
                             <h3>Используется печка?:</h3>
-                            <input type="checkbox"  onChange={(e) => this.setState({isMachineRequired: e.target.value})}></input><br></br>
+                            <input type="checkbox"  onChange={(e) => this.setState({isMachineRequired: !this.state.isMachineRequired})}></input><br></br>
                             <h3>Способ приготовления:</h3>
                             <textarea name = 'recipe'
                                 type = "recipe" 
