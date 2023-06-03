@@ -1,16 +1,53 @@
 import React from 'react'
 import Header from '../components/Header'
+import Users from '../components/Users'
 
 
 class EnterPage extends React.Component{
-     constructor()
-     {
-         super()
-         fetch('http://localhost:5001/Users/many')
-            .then(response => response.json())
-            .then(users => console.log(users))
+    constructor(props)
+    {
+        super(props)
+        this.state = {
+            users: [],
+            inputEmail: "",
+            inputPassword: "",
+            flag: false,
+        }
+        this.myFunc = this.myFunc.bind(this)
+        this.inputClick = this.inputClick.bind(this) 
+    }
+    
+     myFunc = (that) => {
+            fetch('http://localhost:5001/Users/many') //http://:5000/Users/many
+            .then(function(response){return response.json();})
+            .then(function(jsonStr){that.setState({users: jsonStr});})
             .catch(error => console.error(error));
-     }
+        }
+    inputClick = (event) => {
+        event.preventDefault();
+        
+        let flag=false; 
+        this.state.users.map((user) => {
+            if ((user.email === this.state.inputEmail) && (user.password === this.state.inputPassword)) {
+                console.log(this.state.inputEmail)
+                flag = true;
+
+            }
+        })
+        if (!flag) {
+            alert("Неверные почта и пароль");
+            console.log(this.state.inputEmail)
+            console.log(this.state.inputPassword) 
+            console.log(this.state.users)
+        }
+        else{
+            console.log("YOU THE BEST!!!")
+        }
+    }
+    componentDidMount(){
+        this.myFunc(this)
+    }
+
     render()
     {
         return(
@@ -21,10 +58,16 @@ class EnterPage extends React.Component{
                         <form>
                             <br></br>
                             <h3>Email:</h3>
-                            <input name = 'email' type = "text" placeholder='Введите email'/><br></br>
+                            <input name = 'email'
+                                type = "text" 
+                                placeholder='Введите email'
+                                onChange={(e) => this.setState({inputEmail: e.target.value})}/><br></br>
                             <h3>Пароль:</h3>
-                            <input name = 'password' type = "password" placeholder='Введите пароль'/><br></br>
-                            <button type = 'submit'>Войти</button>
+                            <input  name = 'password'
+                                    type = "password" 
+                                    placeholder='Введите пароль'
+                                    onChange={(e) => this.setState({inputPassword: e.target.value})}/><br></br>
+                            <button type = 'button' onClick={this.inputClick}>Войти</button>
                         </form> 
                     </div>
                 </div>
@@ -32,6 +75,7 @@ class EnterPage extends React.Component{
             </div>
         )
     }
+    
 }
 
 export default EnterPage
