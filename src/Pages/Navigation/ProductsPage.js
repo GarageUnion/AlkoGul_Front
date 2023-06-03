@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from "../components/Header"
-import PanelTable from '../components/PanelTable'
+import Header from "../../components/Header"
+import PanelTable from '../../components/PanelTable'
 //const baseUrl="https://reqres.in/api/users?page=1"
 
 class ProductsPage extends React.Component{
@@ -52,7 +52,7 @@ class ProductsPage extends React.Component{
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
                 </header>
                 <div >
-                    <PanelTable elements={this.state.products} emptyListMessage="Нет продукции"></PanelTable>
+                    <PanelTable elements={this.state.products} link="/product" emptyListMessage="Нет продукции"></PanelTable>
                 </div>
             </div>
         )
