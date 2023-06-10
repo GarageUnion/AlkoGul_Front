@@ -45,17 +45,17 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/pieRecipe",
+        path: "/pieRecipe/:id",
         element: <PieRecipePage/>,
         errorElement: <ErrorPage />,
     },
     {
-        path: "/product",
+        path: "/product/:id",
         element: <ProductDiscriptionPage/>,
         errorElement: <ErrorPage />,
     },
     {
-        path: "/craftBreadRecipe",
+        path: "/craftBreadRecipe/:id",
         element: <CraftBreadRecipePage/>,
         errorElement: <ErrorPage />,
     },

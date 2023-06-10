@@ -26,7 +26,7 @@ class ProductsPage extends React.Component{
                 <header style={{display: 'flex',alignItems: 'center',justifyContent: 'center',}}>
                 </header>
                 <div >
-                    <PanelTable elements={this.state.products} link="/product" emptyListMessage="Нет продукции"></PanelTable>
+                    <PanelTable elements={this.state.products} link="/product/" emptyListMessage="Нет продукции"></PanelTable>
                 </div>
             </div>
         )

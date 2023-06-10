@@ -28,7 +28,7 @@ class CraftBreadPage extends React.Component{
                         <Link to = "/newCraftBreadRecipe"><button>Поделиться рецептом</button></Link>
                     </header>
                     <div >
-                        <PanelTable elements={this.state.craftBreads} link="/craftBreadRecipe" emptyListMessage="Нет Хлеба"></PanelTable>
+                        <PanelTable elements={this.state.craftBreads} link="/craftBreadRecipe/" emptyListMessage="Нет Хлеба"></PanelTable>
                     </div>
                 </div>
             </div>

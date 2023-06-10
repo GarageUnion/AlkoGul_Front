@@ -29,7 +29,7 @@ class PiesPage extends React.Component{
                         <Link to = "/newRecipe" ><button>Поделиться рецептом</button></Link>
                     </header>
                     <div>
-                    <PanelTable elements={this.state.pies} link="/pieRecipe" emptyListMessage="Нет пирожков"></PanelTable>
+                    <PanelTable elements={this.state.pies} link="/pieRecipe/" emptyListMessage="Нет пирожков"></PanelTable>
                     </div>
                 </div>
             </div>

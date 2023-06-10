@@ -10,15 +10,13 @@ export class BreadPanel extends React.Component{
         return(
             <div>
             <form className="panel">
-                <Link to={{
-                     pathname: this.props.link,
-                    // state: this.props.data
-                    }} 
-                     className="LinkPanel" >
+                <Link to={this.props.link+this.props.data.id}
+                className="LinkPanel" >
                     <div>
                         <img src={stockImage}></img>
                         <h1 className="name"> {this.props.data.name} </h1>
                         <label className="rating">{this.props.data.rate}</label>
+                        <label className="rating">{this.props.data.num}</label>
                     </div>
                 </Link>
             </form>

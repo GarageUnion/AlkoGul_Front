@@ -1,25 +1,13 @@
 import React from 'react'
 import Header from "../../components/Header"
-import { useLocation } from 'react-router-dom'
+import { useParams } from "react-router-dom";
+import { useEffect } from 'react';
+const ProductDiscriptionPage = (props) => {
 
+    let { id } = useParams(); 
+    console.log(`${id}`);
+    
 
-class ProductDiscriptionPage extends React.Component{
-    constructor(props){
-        super(props);
-       // this.state = {product: this.props.location.state}
-    }
-    render()
-    {
-        return(
-            <div className='ProductDiscription'>
-                <Header />
-                <div>
-                    <h2>Фото пирожка:</h2>
-                    {/* <h2>{this.props.location.state.name}</h2>  */}
-                </div>
-            </div>
-        )
-    }
 }
 
 export default ProductDiscriptionPage

@@ -37,7 +37,8 @@ class RegistrationPage extends React.Component{
                     console.log('Успех:', JSON.stringify(result));
                 } catch (error) {
                     console.error('Ошибка:', error);
-                }                 
+                }              
+   
             }
             else{
                 alert("Пароли не совпадают")
