@@ -31,9 +31,8 @@ class EnterPage extends React.Component{
         let flag=false; 
         this.state.users.map((user) => {
             if ((user.email === this.state.inputEmail) && (user.password === this.state.inputPassword)) {
-                console.log(this.state.inputEmail)
                 flag = true;
-
+                localStorage.setItem("profileName",user.name)
             }
         })
         if (!flag) {
@@ -43,7 +42,7 @@ class EnterPage extends React.Component{
             console.log(this.state.users)
         }
         else{
-            console.log("YOU THE BEST!!!")
+            localStorage.setItem("loggedIn",true)
             window.history.pushState({},undefined,"/");
             window.history.go();
         }

@@ -33,7 +33,8 @@ class RegistrationPage extends React.Component{
                             })
                     });
                     const result= response;
-                    console.log('Успех:', JSON.stringify(result));
+                    localStorage.setItem("loggedIn",true)
+                    localStorage.setItem("profileName", inputName)
                     window.history.pushState({},undefined,"/");
                     window.history.go();
                 } catch (error) {

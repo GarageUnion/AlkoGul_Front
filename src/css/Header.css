@@ -36,6 +36,20 @@ header.topHeader .rightContainer{
     justify-content:flex-end;
 
 }
+header .profileName{
+    
+    margin-top: 17px;
+    font-size: 30px;
+}
+header .exitIcon{
+    margin: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    transform: scale(2)
+}
+header .exitIcon:hover{
+    opacity:0.5;
+}
 header.topHeader button.Enter{
     color: #edecee;
     margin: 0;
