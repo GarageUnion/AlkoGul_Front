@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-
 class RegistrationPage extends React.Component{
     constructor(props)
     {
@@ -35,6 +34,8 @@ class RegistrationPage extends React.Component{
                     });
                     const result= response;
                     console.log('Успех:', JSON.stringify(result));
+                    window.history.pushState({},undefined,"/");
+                    window.history.go();
                 } catch (error) {
                     console.error('Ошибка:', error);
                 }              
