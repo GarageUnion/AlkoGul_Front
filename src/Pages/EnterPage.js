@@ -1,11 +1,13 @@
 import React from 'react'
 import Header from '../components/Header'
 
+
 class EnterPage extends React.Component{
     constructor(props)
     {
         super(props)
         this.state = {
+            navigate: false,
             users: [],
             inputEmail: "",
             inputPassword: ""
@@ -22,7 +24,8 @@ class EnterPage extends React.Component{
             .then(function(jsonStr){that.setState({users: jsonStr});})
             .catch(error => console.error(error));
         }
-    inputClick = (event) => {
+
+    inputClick = async (event) => {
         event.preventDefault();
         
         let flag=false; 
@@ -41,6 +44,8 @@ class EnterPage extends React.Component{
         }
         else{
             console.log("YOU THE BEST!!!")
+            window.history.pushState({},undefined,"/");
+            window.history.go();
         }
     }
     
