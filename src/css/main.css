@@ -26,3 +26,7 @@ button{
     grid-template-columns: repeat(4,1fr);
     justify-content:  center;
 }
+.review{
+    background-color: #e3e3e3;
+    margin: 5px;
+}

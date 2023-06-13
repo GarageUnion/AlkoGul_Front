@@ -20,38 +20,52 @@ class RegistrationPage extends React.Component{
         let inputConfirmPassWord=this.state.inputConfirmPassword;
         if((inputName!=="")&&(inputEmail!=="")&&(inputPassword!=="")&&(inputConfirmPassWord!==""))
         {
-            if (inputPassword===inputConfirmPassWord)
-            {
-                try {
-                    const response = fetch('http://localhost:5001/Users', {
-                        method: 'post',
-                        headers: {
-                            'Content-Type': 'application/json'},
-                        body: JSON.stringify({ userName: inputName,
-                                email: inputEmail,
-                                password: inputPassword,
-                            })
-                    });
-                    const result= response;
-                    console.log('Успех:', JSON.stringify(result));
-                    localStorage.setItem("loggedIn",true)
-                    localStorage.setItem("profileName", inputName)
-                    window.history.pushState({},undefined,"/");
+          if (inputPassword===inputConfirmPassWord)
+          {
+            try {
+              fetch('http://localhost:5001/Users', {
+                method: 'post',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  userName: inputName,
+                  email: inputEmail,
+                  password: inputPassword
+                })
+              })
+              .then((response) => {
+                console.log('Успех:', response);
+                console.log('http://localhost:5001/Users/getUserAfterLogin?Email='+inputEmail+'&Password='+inputPassword)
+                // Перемещаем Get запрос в блок .then() после успешного выполнения Post запроса
+                fetch('http://localhost:5001/Users/getUserAfterLogin?Email='+inputEmail+'&Password='+inputPassword)
+                .then(function(response){return response.json();})
+                .then(function(jsonStr){
+                    
+                  localStorage.setItem("loggedIn",true)
+                  localStorage.setItem("profileName", jsonStr.name)
+                  localStorage.setItem("profileId", jsonStr.id)
+                }).then(function(){
+                    window.history.pushState({}, undefined, "/");
                     window.history.go();
-                } catch (error) {
-                    console.error('Ошибка:', error);
-                }              
-   
+                })
+                .catch(error => console.error(error));
+              })
+              .catch((error) => {
+                console.error('Ошибка:', error);
+              });
+            } catch (error) {
+              console.error('Ошибка:', error);
             }
-            else{
-                alert("Пароли не совпадают")
-            }   
+          }
+          else{
+            alert("Пароли не совпадают")
+          }   
         }
-        else
-        {
-            alert("Не вся поля заполнены")
+        else{
+          alert("Не все поля заполнены")
         }
-    }
+      }
     render()
     {
         return(

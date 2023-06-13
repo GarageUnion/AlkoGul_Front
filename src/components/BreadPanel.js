@@ -16,7 +16,6 @@ export class BreadPanel extends React.Component{
                         <img src={stockImage}></img>
                         <h1 className="name"> {this.props.data.name} </h1>
                         <label className="rating">{this.props.data.rate}</label>
-                        <label className="rating">{this.props.data.num}</label>
                     </div>
                 </Link>
             </form>

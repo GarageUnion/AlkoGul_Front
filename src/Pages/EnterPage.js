@@ -33,6 +33,7 @@ class EnterPage extends React.Component{
             if ((user.email === this.state.inputEmail) && (user.password === this.state.inputPassword)) {
                 flag = true;
                 localStorage.setItem("profileName",user.name)
+                localStorage.setItem("profileId",user.id)
             }
         })
         if (!flag) {

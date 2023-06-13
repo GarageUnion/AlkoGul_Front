@@ -13,7 +13,7 @@ class ProductsPage extends React.Component{
         this.myFunc(this)
     }
     myFunc = (that) => {
-        fetch('http://localhost:5062/Bread/many') //http://:5000/Users/many
+        fetch('http://localhost:5062/Bread/many') 
         .then(function(response){return response.json();})
         .then(function(jsonStr){that.setState({products: jsonStr});})
         .catch(error => console.error(error));

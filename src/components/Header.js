@@ -6,6 +6,7 @@ import { IoExitOutline} from 'react-icons/io5'
 class Header extends React.Component{
     loggedIn=localStorage.getItem('loggedIn');
     profileName=localStorage.getItem('profileName')
+    profileId=localStorage.getItem('profileId')
     render(){
         if (this.loggedIn) return(<div>
             <header className='topHeader' style={{
@@ -15,10 +16,12 @@ class Header extends React.Component{
                 ReBREADing
                 </div>
                 <div className="rightContainer">
-                    <label className='profileName'>{this.profileName}</label>
+                    <label className='profileName'>{this.profileName} {this.profileId}</label>
                     <IoExitOutline className='exitIcon' 
-                    onClick={()=>{localStorage.setItem('loggedIn', "")
-                                  window.history.go()}}>
+                    onClick={()=>{  localStorage.setItem('loggedIn', "")
+                                    localStorage.setItem('profileName', "")
+                                    localStorage.setItem('profileId', "")
+                                    window.history.go()}}>
                     </IoExitOutline>
                 </div>
             </header>

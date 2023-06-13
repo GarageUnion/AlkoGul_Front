@@ -1,0 +1,17 @@
+.description {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content:  center;
+}
+.comment{
+    width:97.5%;
+    resize: none;
+}
+.productPicture{
+    height: auto;
+    width:auto;
+    max-width: 600px;
+    margin: 10px;
+    max-height: 280px;
+}
