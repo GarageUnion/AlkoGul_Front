@@ -55,6 +55,7 @@ class Description extends React.Component{
                   rate: this.state.inputRate, 
                   breadId: this.props.id,
                   userId: localStorage.getItem("profileId"),
+                  userName: localStorage.getItem("profileName")
                 })
             })
             } catch (error) 

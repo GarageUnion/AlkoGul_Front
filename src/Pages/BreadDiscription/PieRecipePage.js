@@ -31,6 +31,30 @@ class Description extends React.Component{
         .then(function(jsonStr){that.setState({pie: jsonStr});})
         .catch(error => console.error(error));
     }
+    inputClick = (event) => {
+        event.preventDefault();
+        if ((localStorage.getItem("loggedIn"))&&(this.state.commentInput!=="")&&(this.state.inputRate!==""))
+        {
+            try {
+                fetch('http://localhost:5218/api/RecipeReviews', {
+                method: 'post',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  review: this.state.commentInput,
+                  rate: this.state.inputRate, 
+                  recipeId: this.props.id,
+                  userId: localStorage.getItem("profileId"),
+                  userName: localStorage.getItem("profileName")
+                })
+            })
+            } catch (error) 
+            {
+                console.error('Ошибка:', error);
+            }
+        }
+    }
     render(){
         return(
             <div>
