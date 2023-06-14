@@ -19,7 +19,7 @@ class EnterPage extends React.Component{
     }
     
      myFunc = (that) => {
-            fetch('http://localhost:5001/Users/many') //http://:5000/Users/many
+            fetch('http://localhost:5001/Users/many') 
             .then(function(response){return response.json();})
             .then(function(jsonStr){that.setState({users: jsonStr});})
             .catch(error => console.error(error));

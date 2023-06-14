@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../../components/Header"
 import { useParams } from "react-router-dom";
 import { Review } from '../../components/Review';
+import { Rating } from '../../components/Rating';
 const ProductDiscriptionPage = (props) => {
 
     let { id } = useParams();
@@ -19,11 +20,12 @@ class Description extends React.Component{
             picture: "",
             pictureLink: 'http://localhost:5062/Pictures/'+this.props.id.toString(),
             commentInput: "",
-            inputRate: '',
+            inputRate: 5,
         }
         console.log(this.state.link)
         this.TakeProduct = this.TakeProduct.bind(this)
-         this.TakePicture = this.TakePicture.bind(this)
+        this.TakePicture = this.TakePicture.bind(this)
+        this.SetRating = this.SetRating.bind(this)
 
         this.TakeProduct(this)
         this.TakePicture(this)
@@ -73,6 +75,10 @@ class Description extends React.Component{
         }
 
     }
+    SetRating(newRate){
+        console.log(newRate)
+        this.setState({inputRate: newRate})
+    }
     render(){
         return(
             <div>
@@ -93,7 +99,7 @@ class Description extends React.Component{
                         {this.state.product.breadReviews?.map((el) =>(<Review data={el}></Review>))}
                         <textarea className='comment' placeholder="Оставьте отзыв"
                             onChange={(e) => this.setState({commentInput: e.target.value})}></textarea>
-                        <input placeholder="Ваша оценка от 1 до 5" onChange={(e) => this.setState({inputRate: e.target.value})}></input>
+                            <Rating SetRating={this.SetRating} rate={this.state.inputRate}></Rating>
                         <button className type = 'button' onClick={this.inputClick}>Отправить отзыв</button>
                     </div>
                 </div>
